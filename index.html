@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
-    <title>SafetyFirst - Security Guard Website Template</title>
+    <title>Trivium Records - Profesionalmente Apasionados, Musicalmente Efectivos.</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free Website Template" name="keywords">
     <meta content="Free Website Template" name="description">
@@ -17,86 +17,75 @@
     <!-- Flaticon Font -->
     <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
 
+
+
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
 </head>
 
 <body class="bg-white">
-    <!-- Topbar Start -->
-    <div class="container-fluid">
-        <div class="row bg-secondary py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left">
-                <div class="d-inline-flex align-items-center">
-                    <p class="mr-2 mb-2 mb-lg-0 text-white">Opening Hours:</p>
-                    <span class="mb-2 mb-lg-0 text-white">8.00AM - 9.00PM</span>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <p class="m-0 mr-1 text-white">Follow Us:</p>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-youtube"></i>
+    <!-- Navbar flotante moderno -->
+    <nav id="mainNavbar" class="fixed top-0 left-0 w-full z-50 transition-bg bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo con imagen -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/" class="flex items-center" id="logoLink">
+                        <img id="logoImg" src="img/logo_s.webp" alt="Logo" class="h-20 transition-all duration-300" style="max-height:75px;">
+                        <span class="ml-2 text-2xl font-bold text-white transition-colors duration-300" id="logoText"></span>
                     </a>
                 </div>
-            </div>
-        </div>
-        <div class="row py-3 px-lg-5">
-            <div class="col-lg-4">
-                <a href="" class="navbar-brand d-none d-lg-block">
-                    <h1 class="m-0 display-5 text-capitalize font-italic"><span class="text-primary">Safety</span>First</h1>
-                </a>
-            </div>
-            <div class="col-lg-8 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <div class="d-inline-flex flex-column text-center pr-3 border-right">
-                        <h6>Our Office</h6>
-                        <p class="m-0">123 Street, NY, USA</p>
-                    </div>
-                    <div class="d-inline-flex flex-column text-center px-3 border-right">
-                        <h6>Email Us</h6>
-                        <p class="m-0">info@example.com</p>
-                    </div>
-                    <div class="d-inline-flex flex-column text-center pl-3">
-                        <h6>Call Us</h6>
-                        <p class="m-0">+012 345 6789</p>
-                    </div>
+                <!-- Botones de navegación -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-white hover:text-primary transition-colors duration-200 font-medium">Inicio</a>
+                    <a href="/about.html" class="text-white hover:text-primary transition-colors duration-200 font-medium">Nosotros</a>
+                    <a href="/service.html" class="text-white hover:text-primary transition-colors duration-200 font-medium">Servicios</a>
+                    <a href="/contact.html" class="text-white hover:text-primary transition-colors duration-200 font-medium">Contacto</a>
+                </div>
+                <!-- Botón hamburguesa -->
+                <div class="md:hidden flex items-center">
+                    <button id="menuBtn" class="text-white focus:outline-none" aria-label="Abrir menú">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Topbar End -->
+        <!-- Menú móvil -->
+        <div id="mobileMenu" class="md:hidden fixed inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center space-y-8 text-xl font-semibold text-white transform -translate-y-full transition-transform duration-300">
+            <button id="closeMenuBtn" class="absolute top-6 right-6 text-white focus:outline-none" aria-label="Cerrar menú">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <a href="#inicio" class="hover:text-primary" onclick="closeMobileMenu()">Inicio</a>
+            <a href="#servicios" class="hover:text-primary" onclick="closeMobileMenu()">Servicios</a>
+            <a href="#portafolio" class="hover:text-primary" onclick="closeMobileMenu()">Portafolio</a>
+            <a href="#contacto" class="hover:text-primary" onclick="closeMobileMenu()">Contacto</a>
+        </div>
+    </nav>
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
+    <!-- <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-0">
             <a href="" class="navbar-brand d-block d-lg-none">
                 <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">Safety</span>First</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">Hola</span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-4">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="guard.html" class="nav-item nav-link">Guards</a>
+                    <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                    <a href="about.html" class="nav-item nav-link">Nosotros</a>
+                    <a href="service.html" class="nav-item nav-link">Servicios</a>
+                    <a href="guard.html" class="nav-item nav-link">Academia</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu text-capitalize">
@@ -104,97 +93,67 @@
                             <a href="single.html" class="dropdown-item">Blog Detail</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.html" class="nav-item nav-link">Contacto</a>
                 </div>
             </div>
         </nav>
-    </div>
+    </div> -->
     <!-- Navbar End -->
 
-    <!-- Carousel Start -->
+
     <div class="container-fluid p-0">
-        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h4 class="text-primary m-0">Your Safety, Our Efforts</h4>
-                        <h4 class="display-4 m-0 mt-2 mt-md-3 text-white">Best Security Service</h4>
-                        <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Learn More</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h4 class="text-primary m-0">Your Safety, Our Efforts</h4>
-                        <h4 class="display-4 m-0 mt-2 mt-md-3 text-white">Highly Trained Guards</h4>
-                        <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Learn More</a>
-                    </div>
-                </div>
+        <div class="header-video-container position-relative vh-100" style="height: 100vh; min-height: 400px; max-height: none; overflow: hidden;">
+            <video id="headerVideo" class="w-100 h-100 position-absolute" style="object-fit: cover; left: 0; top: 0; z-index: 1;" autoplay loop muted playsinline>
+                <source src="img/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="header-content position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="z-index: 2; top: 0; left: 0;">
+                <h3 class="text-primary m-0">Profesionalmente Apasionados</h3>
+                <img src="img/logo_s.webp" alt="Trivium Records" class="mb-3" style="max-width: 300px; width: 30%; height: auto;">
+                <h4 class="text-white mt-2 mb-4 text-center">Musicalmente Efectivos</h4>
+                <a href="#" class="btn btn-lg btn-primary px-4">Conócenos</a>
             </div>
-            <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
-                <div class="btn btn-primary rounded-circle" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-prev-icon mb-n2"></span>
-                </div>
-            </a>
-            <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
-                <div class="btn btn-primary rounded-circle" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-next-icon mb-n2"></span>
-                </div>
-            </a>
+            <button id="muteBtn" class="btn btn-secondary position-absolute" style="bottom: 30px; right: 30px; z-index: 3;">
+                <i class="fa fa-volume-mute"></i>
+            </button>
+            <div class="header-overlay position-absolute w-100 h-100" style="background: rgba(0, 0, 0, 0.418); z-index: 1; top: 0; left: 0;"></div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('headerVideo');
+            const muteBtn = document.getElementById('muteBtn');
+
+            function updateIcon() {
+                muteBtn.innerHTML = video.muted
+                    ? '<i class="fa fa-volume-mute"></i>'
+                    : '<i class="fa fa-volume-up"></i>';
+            }
+
+            muteBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                video.muted = !video.muted;
+                updateIcon();
+            });
+
+            // Ensure icon matches initial state
+            updateIcon();
+        });
+    </script>
     <!-- Carousel End -->
 
 
-    <!-- Features Start -->
-    <div class="container-fluid py-5 py-lg-0 feature">
-        <div class="row py-5 py-lg-0">
-            <div class="col-lg-4 p-0">
-                <div class="feature-item d-flex align-items-center border-right px-5 mb-4 mb-lg-0">
-                    <i class="flaticon-policeman display-3 text-primary mr-4"></i>
-                    <div class="">
-                        <h5 class="mb-3">Professional Staff</h5>
-                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci velit id libero
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 p-0">
-                <div class="feature-item d-flex align-items-center border-right px-5 mb-4 mb-lg-0">
-                    <i class="flaticon-helmet display-3 text-primary mr-4"></i>
-                    <div class="">
-                        <h5 class="mb-3">Latest Equipments</h5>
-                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci velit id libero
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 p-0">
-                <div class="feature-item d-flex align-items-center px-5">
-                    <i class="flaticon-surveillance display-3 text-primary mr-4"></i>
-                    <div class="">
-                        <h5 class="mb-3">24/7 Support</h5>
-                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci velit id libero
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Features End -->
-
-
     <!-- About Start -->
-    <div class="container-fluid mb-5" style="background: #f6f6f6;">
+    <div class="container-fluid mb-5" style="background: #353535;">
         <div class="row align-items-center">
             <div class="col-lg-6 px-0">
                 <img width="100%" class="img-fluid" src="img/about.jpg" alt="Image">
             </div>
             <div class="col-lg-6 py-5 py-lg-0 px-3 px-lg-5">
-                <h5 class="text-primary mb-3">About Us</h5>
-                <h1 class="mb-4">15 Years Experience</h1>
-                <p>Labore vero lorem eos sed aliquy ipsum aliquy sed. Vero dolore dolore takima ipsum lorem rebum</p>
+                <h5 class="text-white mb-3">Sobre Nosotros</h5>
+                <!-- <h1 class="mb-4">15 Years Experience</h1> -->
+                <p class="text-white">Trivium Records es una empresa dedicada a la producción, enseñanza y representación musical en todos los aspectos. Tiene como objetivo brindar 
+                    servicios y productos de calidad a quienes quieren llevar sus producciones, su nivel música a su carrera profesional a nuevos horizontes</p>
                 <div class="row py-2">
                     <div class="col-sm-6">
                         <i class="flaticon-approved display-3 text-primary"></i>
@@ -217,7 +176,7 @@
     <!-- Services Start -->
     <div class="container pt-5">
         <div class="d-flex flex-column text-center mb-5">
-            <h5 class="text-primary mb-3">Our Services</h5>
+            <h5 class="text-primary mb-3">Nuestros Servicios</h5>
             <h1 class="m-0">Premium Security Services</h1>
         </div>
         <div class="row pb-3">
@@ -226,10 +185,11 @@
                     <img class="card-img-top" src="img/service-1.jpg" alt="">
                     <div class="card-body bg-secondary d-flex align-items-center p-0">
                         <h3 class="flaticon-desk font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
-                        <h6 class="card-title text-white text-truncate m-0">Office Security</h6>
+                        <h6 class="card-title text-white text-truncate m-0">Vitrium Academia</h6>
                     </div>
                     <div class="card-footer">
-                        Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo et.
+                        <p>Un espacio académico para la enseñanza de música (piano, canto, DJ) enfocado hacia el perfeccionamiento musical. </p>
+                        <p>Clases teóricas y practicas impartidas por maestros con experiencia vasta en la música. </p>
                     </div>
                 </div>
             </div>
@@ -238,10 +198,11 @@
                     <img class="card-img-top" src="img/service-2.jpg" alt="">
                     <div class="card-body bg-secondary d-flex align-items-center p-0">
                         <h3 class="flaticon-home font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
-                        <h6 class="card-title text-white text-truncate m-0">Home Security</h6>
+                        <h6 class="card-title text-white text-truncate m-0">Vitrium Produccion</h6>
                     </div>
                     <div class="card-footer">
-                        Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo et.
+                        <p>Renta y servicio de producciones musicales para conciertos y eventos sociales.</p>
+                        <p>Montaje de festivales, fiestas, organización de eventos, curaduria de musica, servicios musicales en vivo.</p>
                     </div>
                 </div>
             </div>
@@ -250,46 +211,11 @@
                     <img class="card-img-top" src="img/service-3.jpg" alt="">
                     <div class="card-body bg-secondary d-flex align-items-center p-0">
                         <h3 class="flaticon-factory font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
-                        <h6 class="card-title text-white text-truncate m-0">Industry Security</h6>
+                        <h6 class="card-title text-white text-truncate m-0">Vitrium Label</h6>
                     </div>
                     <div class="card-footer">
-                        Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo et.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card mb-2 p-3">
-                    <img class="card-img-top" src="img/service-4.jpg" alt="">
-                    <div class="card-body bg-secondary d-flex align-items-center p-0">
-                        <h3 class="flaticon-transportation font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
-                        <h6 class="card-title text-white text-truncate m-0">Transport Security</h6>
-                    </div>
-                    <div class="card-footer">
-                        Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo et.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card mb-2 p-3">
-                    <img class="card-img-top" src="img/service-5.jpg" alt="">
-                    <div class="card-body bg-secondary d-flex align-items-center p-0">
-                        <h3 class="flaticon-desk font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
-                        <h6 class="card-title text-white text-truncate m-0">Objects Security</h6>
-                    </div>
-                    <div class="card-footer">
-                        Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo et.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card mb-2 p-3">
-                    <img class="card-img-top" src="img/service-6.jpg" alt="">
-                    <div class="card-body bg-secondary d-flex align-items-center p-0">
-                        <h3 class="flaticon-bodyguard font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
-                        <h6 class="card-title text-white text-truncate m-0">Private Security</h6>
-                    </div>
-                    <div class="card-footer">
-                        Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo et.
+                        <p>Representación artística y distribuidor de musca para músicos de toda clase.</p>
+                        <p>Mercadotecnia, promoción musical, redes, booking e imagen artístico.</p>
                     </div>
                 </div>
             </div>
@@ -673,10 +599,10 @@
         <div class="row pt-3">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
                 <p class="m-0 text-white">
-                    &copy; <a class="text-white font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved. 
-					
-					<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-					Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+                    &copy; <a class="text-white font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.
+
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
                 </p>
             </div>
             <div class="col-md-6 text-center text-md-right">
@@ -716,8 +642,59 @@
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
+    <!-- Tailwind CSS CDN (puedes usar tu propio build si lo prefieres) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        // Navbar background, sombra y cambio de logo al hacer scroll
+        const navbar = document.getElementById('mainNavbar');
+        const logoText = document.getElementById('logoText');
+        const logoImg = document.getElementById('logoImg');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 40) {
+                navbar.classList.add('bg-white', 'navbar-shadow');
+                navbar.classList.remove('bg-transparent');
+                // Cambia el color del logo y links al hacer scroll
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-primary');
+                logoImg.src = 'img/logo_p.webp'; // Logo para fondo claro
+                document.querySelectorAll('#mainNavbar a').forEach(a => {
+                    a.classList.remove('text-white');
+                    a.classList.add('text-gray-900');
+                });
+            } else {
+                navbar.classList.remove('bg-white', 'navbar-shadow');
+                navbar.classList.add('bg-transparent');
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-primary');
+                logoImg.src = 'img/logo_s.webp'; // Logo para fondo oscuro
+                document.querySelectorAll('#mainNavbar a').forEach(a => {
+                    a.classList.add('text-white');
+                    a.classList.remove('text-gray-900');
+                });
+            }
+        });
+
+        // Menú móvil
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-y-full');
+            mobileMenu.classList.add('translate-y-0');
+        });
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+        function closeMobileMenu() {
+            mobileMenu.classList.add('-translate-y-full');
+            mobileMenu.classList.remove('translate-y-0');
+        }
+        // Cierra el menú móvil al hacer click en un link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    </script>
 </body>
 
 </html>

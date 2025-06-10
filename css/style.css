@@ -21,8 +21,8 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #E45F4E;
-  --secondary: #262626;
+  --primary: #1C0404;
+  --secondary: #F79A20;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -63,7 +63,7 @@ body {
   line-height: 1.5;
   color: #848484;
   text-align: left;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -154,12 +154,12 @@ sup {
 }
 
 a {
-  color: #E45F4E;
+  color: #F79A20;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #c7321e;
+  color: #F79A20;
   text-decoration: underline;
 }
 
@@ -2460,29 +2460,29 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #E45F4E;
-  border-color: #E45F4E;
+  background-color: #F79A20;
+  border-color: #F79A20;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #df412d;
-  border-color: #dd3722;
+  background-color: #F79A20;
+  border-color: #F79A20;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #df412d;
-  border-color: #dd3722;
+  background-color: #F79A20;
+  border-color: #F79A20;
   box-shadow: 0 0 0 0.2rem rgba(232, 119, 105, 0.5);
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #E45F4E;
-  border-color: #E45F4E;
+  background-color: #F79A20;
+  border-color: #F79A20;
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #dd3722;
-  border-color: #d23420;
+  background-color: #F79A20;
+  border-color: #F79A20;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(232, 119, 105, 0.5);
@@ -3873,7 +3873,16 @@ input[type=button].btn-block {
   display: block;
 }
 
-.navbar {
+/* Navbar Start */
+/* Sombra personalizada para el navbar */
+        .navbar-shadow {
+            box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.10), 0 1.5px 4px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        .transition-bg {
+            transition: background-color 0.4s cubic-bezier(.4, 0, .2, 1), box-shadow 0.4s cubic-bezier(.4, 0, .2, 1);
+        }
+/* .navbar {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -4235,7 +4244,9 @@ input[type=button].btn-block {
 }
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: #fff;
-}
+} */
+/* Navbar End */
+
 
 .card {
   position: relative;
