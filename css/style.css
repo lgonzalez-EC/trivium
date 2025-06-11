@@ -122,11 +122,15 @@ a:hover {
 #mainNavbar .fa-brands,
 #mainNavbar .fa {
   color: #fff !important;
-  font-size: 1.4rem !important;
+  font-size: 1.4rem;
   opacity: 1 !important;
   visibility: visible !important;
-  z-index: 9999 !important;
-  filter: none !important;
+}
+
+#mainNavbar .btn-outline-light:hover .fab,
+#mainNavbar .btn-outline-light:hover .fa-brands,
+#mainNavbar .btn-outline-light:hover .fa {
+  color: #F79A20 !important;
 }
 
 /* Corrige el gap si Bootstrap no lo soporta */
