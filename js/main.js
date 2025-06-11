@@ -72,7 +72,7 @@
             navbar.classList.remove('bg-transparent', 'bg-white');
             logoText.classList.remove('text-white');
             logoText.classList.add('text-primary');
-            logoImg.src = 'img/logo_p.webp'; // Logo para fondo claro
+            logoImg.src = 'img/logo_s.webp'; // Logo para fondo claro
             document.querySelectorAll('#mainNavbar .nav-link').forEach(a => {
                 a.classList.remove('text-white');
                 a.classList.add('text-light');
