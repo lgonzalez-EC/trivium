@@ -20,18 +20,16 @@
     <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- TU CSS PERSONALIZADO SIEMPRE AL FINAL -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -39,7 +37,7 @@
 <body class="" style="background: #000000;">
 
 
-    <!-- Navbar flotante moderno -->
+    <!-- Navbar -->
     <nav id="mainNavbar" class="navbar navbar-expand-md navbar-light fixed-top bg-transparent shadow-sm transition-bg">
         <div class="container">
             <!-- Logo -->
@@ -68,17 +66,29 @@
                         <a class="nav-link text-white fw-medium text-center" href="/contact.html">Contacto</a>
                     </li>
                 </ul>
+                <!-- Navbar social icons -->
                 <div class="d-none d-md-flex align-items-center gap-2">
-                    <a href="#" class="text-white px-2" aria-label="TikTok"><i
-                            class="fa-brands fa-tiktok fa-lg"></i></a>
-                    <a href="#" class="text-white px-2" aria-label="Facebook"><i
-                            class="fab fa-facebook-f fa-lg"></i></a>
-                    <a href="#" class="text-white px-2" aria-label="Instagram"><i
-                            class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://www.tiktok.com/@triviumrecords"
+                        class="btn btn-outline-light rounded-circle text-center px-0 mx-1"
+                        style="width: 40px; height: 40px;" aria-label="TikTok" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61576953278858"
+                        class="btn btn-outline-light rounded-circle text-center px-0 mx-1"
+                        style="width: 40px; height: 40px;" aria-label="Facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/triviumrecords.mx"
+                        class="btn btn-outline-light rounded-circle text-center px-0 mx-1"
+                        style="width: 40px; height: 40px;" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
+
+
 
 
     <div class="container-fluid p-0">
@@ -110,27 +120,6 @@
                 style="background: rgba(0, 0, 0, 0.781); z-index: 1; top: 0; left: 0;"></div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const video = document.getElementById('headerVideo');
-            const muteBtn = document.getElementById('muteBtn');
-
-            function updateIcon() {
-                muteBtn.innerHTML = video.muted
-                    ? '<i class="fa fa-volume-mute"></i>'
-                    : '<i class="fa fa-volume-up"></i>';
-            }
-
-            muteBtn.addEventListener('click', function (e) {
-                e.stopPropagation();
-                video.muted = !video.muted;
-                updateIcon();
-            });
-
-            // Ensure icon matches initial state
-            updateIcon();
-        });
-    </script>
     <!-- Carousel End -->
 
 
@@ -174,20 +163,18 @@
     <!-- Services Start -->
     <div class="container pt-5" style="background: #000000;">
         <div class="d-flex flex-column text-center mb-5">
-            <h3 class="text-primary mb-3 display-6">Nuestros Servicios</h3>
+            <h3 class="text-white mb-3 display-6">Nuestros Servicios</h3>
         </div>
         <div class="row pb-3 justify-content-center">
             <!-- Card 1 -->
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="custom-card">
                     <div class="custom-card-img-wrapper">
-                        <img class="custom-card-img" src="img/service-1.jpg" alt="">
+                        <img class="custom-card-img" src="img/service_1.webp" alt="">
                     </div>
                     <div class="custom-card-content">
-                        <div class="d-flex align-items-center mb-2">
-                            <h3 class="flaticon-desk d-flex align-items-center justify-content-center bg-primary text-white m-0 me-3"
-                                style="width: 45px; height: 45px; border-radius: 50%; font-size: 1.5rem;"></h3>
-                            <h6 class="card-title text-white text-truncate m-0">Trivium Academia</h6>
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                            <h4 class="card-title text-white text-truncate m-0">Trivium Academia</h4>
                         </div>
                         <p>Un espacio académico para la enseñanza de música (piano, canto, DJ) enfocado hacia el
                             perfeccionamiento musical.</p>
@@ -199,13 +186,11 @@
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="custom-card">
                     <div class="custom-card-img-wrapper">
-                        <img class="custom-card-img" src="img/service-2.jpg" alt="">
+                        <img class="custom-card-img" src="img/service_2.webp" alt="">
                     </div>
                     <div class="custom-card-content">
-                        <div class="d-flex align-items-center mb-2">
-                            <h3 class="flaticon-home d-flex align-items-center justify-content-center bg-primary text-white m-0 me-3"
-                                style="width: 45px; height: 45px; border-radius: 50%; font-size: 1.5rem;"></h3>
-                            <h6 class="card-title text-white text-truncate m-0">Trivium Producción</h6>
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                            <h4 class="card-title text-white text-truncate m-0">Trivium Producción</h4>
                         </div>
                         <p>Renta y servicio de producciones musicales para conciertos y eventos sociales.</p>
                         <p>Montaje de festivales, fiestas, organización de eventos, curaduría de música, servicios
@@ -220,10 +205,8 @@
                         <img class="custom-card-img" src="img/service-3.jpg" alt="">
                     </div>
                     <div class="custom-card-content">
-                        <div class="d-flex align-items-center mb-2">
-                            <h3 class="flaticon-factory d-flex align-items-center justify-content-center bg-primary text-white m-0 me-3"
-                                style="width: 45px; height: 45px; border-radius: 50%; font-size: 1.5rem;"></h3>
-                            <h6 class="card-title text-white text-truncate m-0">Trivium Label</h6>
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                            <h4 class="card-title text-white text-truncate m-0">Trivium Label</h4>
                         </div>
                         <p>Representación artística y distribuidor de música para músicos de toda clase.</p>
                         <p>Mercadotecnia, promoción musical, redes, booking e imagen artística.</p>
@@ -251,67 +234,88 @@
     <!-- Subscribe End -->
 
 
-
     <!-- Testimonial Start -->
-    <div class="container-fluid my-5 p-0 py-5" style="background: #f6f6f6;">
+    <div class="container-fluid my-5 p-0 py-5">
         <div class="container p-0 py-5">
             <div class="d-flex flex-column text-center mb-5">
-                <h5 class="text-primary mb-3">Testimonial</h5>
+                <h3 class="text-white mb-3 display-6">Testimonial</h3>
             </div>
             <div class="owl-carousel testimonial-carousel">
+                <!-- Testimonio 1 -->
                 <div class="testimonial-item px-3">
                     <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
-                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod clita lorem.
-                        Dolores tempor voluptua ipsum sanctus clita
+                        "Hiciste nuestra boda inolvidable! El DJ nos traía bailando toda la noche, Muchas gracias por
+                        todo!"
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="img-thumbnail bg-light rounded-circle" src="img/testimonial-1.jpg"
-                            style="width: 80px; height: 80px; padding: 12px;" alt="Image">
                         <div class="pl-4">
-                            <h6 class="text-primary">Client Name</h6>
-                            <p class="m-0">Trivium Academia</p>
+                            <h4 class="text-primary">Dania y Roberto</h4>
+                            <p class="m-0">Servicio Trivium Produccion</p>
                         </div>
                     </div>
                 </div>
+                <!-- Testimonio 2 -->
                 <div class="testimonial-item px-3">
                     <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
-                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod clita lorem.
-                        Dolores tempor voluptua ipsum sanctus clita
+                        "Apenas ando reviviendo, ame todo, la musica, la illuminacion, el sonido, mis amigos siguen
+                        preguntando por ustede!"
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="img-thumbnail bg-light rounded-circle" src="img/testimonial-2.jpg"
-                            style="width: 80px; height: 80px; padding: 12px;" alt="Image">
                         <div class="pl-4">
-                            <h6 class="text-primary">Client Name</h6>
-                            <p class="m-0">Trivium Produccion</p>
+                            <h4 class="text-primary">Fernando y Geraldine</h4>
+                            <p class="m-0">Servicio Trivium Produccion</p>
                         </div>
                     </div>
                 </div>
+                <!-- Testimonio 3 -->
                 <div class="testimonial-item px-3">
                     <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
-                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod clita lorem.
-                        Dolores tempor voluptua ipsum sanctus clita
+                        "Agradecidos estamos con ustedes, se dejaron muy buenos recuerdos y fuiste parte clave de ello!
+                        Quedo todo espectacular."
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="img-thumbnail bg-light rounded-circle" src="img/testimonial-3.jpg"
-                            style="width: 80px; height: 80px; padding: 12px;" alt="Image">
                         <div class="pl-4">
-                            <h6 class="text-primary">Client Name</h6>
-                            <p class="m-0">Profession</p>
+                            <h4 class="text-primary">Pau y Jorge</h4>
+                            <p class="m-0">Servicio Trivium Produccion</p>
                         </div>
                     </div>
                 </div>
+                <!-- Testimonio 4 -->
                 <div class="testimonial-item px-3">
                     <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
-                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod clita lorem.
-                        Dolores tempor voluptua ipsum sanctus clita
+                        "Es un gusto coincidir con un maestro que de verdad ama lo que hace como usted, gracias por las
+                        enseñanzas, espero cantar con usted pronto en escenario!"
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="img-thumbnail bg-light rounded-circle" src="img/testimonial-4.jpg"
-                            style="width: 80px; height: 80px; padding: 12px;" alt="Image">
                         <div class="pl-4">
-                            <h6 class="text-primary">Client Name</h6>
-                            <p class="m-0">Profession</p>
+                            <h4 class="text-primary">Oscar, Tenor</h4>
+                            <p class="m-0">Servicio Trivium Academia</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonio 5 -->
+                <div class="testimonial-item px-3">
+                    <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
+                        "En el poco tiempo que llevo de clase, he aprendido mucho de ustedes, es lindo encontrar
+                        personas que les apasiona el canto y la musica."
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="pl-4">
+                            <h4 class="text-primary">Olivia, Alto</h4>
+                            <p class="m-0">Servicio Trivium Academia</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonio 6 -->
+                <div class="testimonial-item px-3">
+                    <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
+                        "Certifico que el maestro profesionalmente sabe muy bien lo que hace, hace de los ensayos
+                        divertidos y estoy emocionado por seguir aprendiendo con el"
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="pl-4">
+                            <h4 class="text-primary">Julio, Bajo</h4>
+                            <p class="m-0">Servicio Trivium Academia</p>
                         </div>
                     </div>
                 </div>
@@ -419,58 +423,8 @@
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
-    <!-- Tailwind CSS CDN (puedes usar tu propio build si lo prefieres) -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script>
-        // Navbar background, sombra y cambio de logo al hacer scroll
-        const navbar = document.getElementById('mainNavbar');
-        const logoText = document.getElementById('logoText');
-        const logoImg = document.getElementById('logoImg');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 40) {
-                navbar.classList.add('bg-white', 'navbar-shadow');
-                navbar.classList.remove('bg-transparent');
-                logoText.classList.remove('text-white');
-                logoText.classList.add('text-primary');
-                logoImg.src = 'img/logo_p.webp'; // Logo para fondo claro
-                document.querySelectorAll('#mainNavbar .nav-link').forEach(a => {
-                    a.classList.remove('text-white');
-                    a.classList.add('text-dark');
-                });
-            } else {
-                navbar.classList.remove('bg-white', 'navbar-shadow');
-                navbar.classList.add('bg-transparent');
-                logoText.classList.add('text-white');
-                logoText.classList.remove('text-primary');
-                logoImg.src = 'img/logo_s.webp'; // Logo para fondo oscuro
-                document.querySelectorAll('#mainNavbar .nav-link').forEach(a => {
-                    a.classList.add('text-white');
-                    a.classList.remove('text-dark');
-                });
-            }
-        });
-
-        // Menú móvil
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const closeMenuBtn = document.getElementById('closeMenuBtn');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('-translate-y-full');
-            mobileMenu.classList.add('translate-y-0');
-        });
-        closeMenuBtn.addEventListener('click', closeMobileMenu);
-        function closeMobileMenu() {
-            mobileMenu.classList.add('-translate-y-full');
-            mobileMenu.classList.remove('translate-y-0');
-        }
-        // Cierra el menú móvil al hacer click en un link
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
-        });
-    </script>
+    <script src="js/main.js" defer></script>
 
 </body>
 
