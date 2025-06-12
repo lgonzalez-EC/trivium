@@ -124,20 +124,33 @@
 
 
     <!-- Facts Start -->
-    <div class="container-xxl my-5 py-5 text-center">
+    <div class="container-xxl my-5 py-5 text-center parallax-facts" 
+        style="background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('img/header-3.webp') center center / cover no-repeat; background-attachment: fixed; border-radius: 2rem;">
         <div class="d-flex flex-column text-center mb-5">
-            <h2 class="text-white mb-3">personaliza tu Paquete</h2>
+            <h2 class="text-white mb-3 display-4">Personaliza tu Paquete</h2>
             <p class="text-white mb-0"></p>
         </div>
         <div class="d-flex justify-content-center">
-            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20Trivium%20Records"
+            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20personalizar%20mi%20paquete%20de%20servicios%20con%20Trivium%20Records.%20¿Me%20pueden%20ayudar%20a%20cotizar%20según%20mis%20necesidades%3F"
                 class="boton mt-4 px-4 d-flex align-items-center justify-content-center" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp fa-lg"></i>
+                <i class="fab fa-whatsapp fa-lg m-2"></i>
                 WhatsApp
             </a>
         </div>
-
     </div>
+    <script>
+        // Parallax efecto suave para la sección de facts
+        window.addEventListener('scroll', function () {
+            const facts = document.querySelector('.parallax-facts');
+            if (!facts) return;
+            let scrolled = window.pageYOffset;
+            // Solo aplica el efecto si el facts está en viewport
+            const rect = facts.getBoundingClientRect();
+            if (rect.bottom > 0 && rect.top < window.innerHeight) {
+                facts.style.backgroundPosition = `center ${scrolled * 0.5}px`;
+            }
+        });
+    </script>
     <!-- Facts End -->
 
 
@@ -151,7 +164,7 @@
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="custom-card-service">
                     <div class="custom-card-img-wrapper">
-                        <img class="custom-card-img" src="img/service_1.webp" alt="">
+                        <img class="custom-card-img" src="img/pack_party_1.webp" alt="">
                     </div>
                     <div class="custom-card-content">
                         <div class="d-flex justify-content-center align-items-center mb-2">
@@ -166,10 +179,10 @@
                             <li>Equipo Técnico</li>
                         </ul>
                         <div class="d-flex justify-content-center">
-                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20Trivium%20Records"
+                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20el%20Party%20Pack%201"
                                 class="boton mt-4 px-4 d-flex align-items-center justify-content-center" target="_blank"
                                 rel="noopener">
-                                <i class="fab fa-whatsapp fa-lg"></i>
+                                <i class="fab fa-whatsapp fa-lg m-2"></i>
                                 WhatsApp
                             </a>
                         </div>
@@ -180,7 +193,7 @@
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="custom-card-service">
                     <div class="custom-card-img-wrapper">
-                        <img class="custom-card-img" src="img/service_1.webp" alt="">
+                        <img class="custom-card-img" src="img/pack_party_2.webp" alt="">
                     </div>
                     <div class="custom-card-content">
                         <div class="d-flex justify-content-center align-items-center mb-2">
@@ -198,10 +211,10 @@
                         </ul>
 
                         <div class="d-flex justify-content-center">
-                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20Trivium%20Records"
+                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20el%20Party%20Pack%202"
                                 class="boton mt-4 px-4 d-flex align-items-center justify-content-center" target="_blank"
                                 rel="noopener">
-                                <i class="fab fa-whatsapp fa-lg"></i>
+                                <i class="fab fa-whatsapp fa-lg m-2"></i>
                                 WhatsApp
                             </a>
                         </div>
@@ -212,7 +225,7 @@
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="custom-card-service">
                     <div class="custom-card-img-wrapper">
-                        <img class="custom-card-img" src="img/service_1.webp" alt="">
+                        <img class="custom-card-img" src="img/pack_party_3.webp" alt="">
                     </div>
                     <div class="custom-card-content">
                         <div class="d-flex justify-content-center align-items-center mb-2">
@@ -230,10 +243,10 @@
                             <li>Equipo técnico</li>
                         </ul>
                         <div class="d-flex justify-content-center">
-                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20Trivium%20Records"
+                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20el%20Party%20Pack%203"
                                 class="boton mt-4 px-4 d-flex align-items-center justify-content-center" target="_blank"
                                 rel="noopener">
-                                <i class="fab fa-whatsapp fa-lg"></i>
+                                <i class="fab fa-whatsapp fa-lg m-2"></i>
                                 WhatsApp
                             </a>
                         </div>
@@ -273,10 +286,10 @@
                             <li>1 Operador</li>
                         </ul>
                         <div class="d-flex justify-content-center">
-                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20Trivium%20Records"
+                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20el%20Conference%20Pack%201"
                                 class="boton mt-4 px-4 d-flex align-items-center justify-content-center" target="_blank"
                                 rel="noopener">
-                                <i class="fab fa-whatsapp fa-lg"></i>
+                                <i class="fab fa-whatsapp fa-lg m-2"></i>
                                 WhatsApp
                             </a>
                         </div>
@@ -303,10 +316,10 @@
                             <li>1 Operador</li>
                         </ul>
                         <div class="d-flex justify-content-center">
-                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20Trivium%20Records"
+                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20el%20Conference%20Pack%202"
                                 class="boton mt-4 px-4 d-flex align-items-center justify-content-center" target="_blank"
                                 rel="noopener">
-                                <i class="fab fa-whatsapp fa-lg"></i>
+                                <i class="fab fa-whatsapp fa-lg m-2"></i>
                                 WhatsApp
                             </a>
                         </div>
@@ -333,10 +346,10 @@
                             <li>1 Operador</li>
                         </ul>
                         <div class="d-flex justify-content-center">
-                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20Trivium%20Records"
+                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20el%20Conference%20Pack%203"
                                 class="boton mt-4 px-4 d-flex align-items-center justify-content-center" target="_blank"
                                 rel="noopener">
-                                <i class="fab fa-whatsapp fa-lg"></i>
+                                <i class="fab fa-whatsapp fa-lg m-2"></i>
                                 WhatsApp
                             </a>
                         </div>
@@ -363,10 +376,10 @@
                             <li>1 Operador</li>
                         </ul>
                         <div class="d-flex justify-content-center">
-                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20Trivium%20Records"
+                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20el%20Conference%20Pack%204"
                                 class="boton mt-4 px-4 d-flex align-items-center justify-content-center" target="_blank"
                                 rel="noopener">
-                                <i class="fab fa-whatsapp fa-lg"></i>
+                                <i class="fab fa-whatsapp fa-lg m-2"></i>
                                 WhatsApp
                             </a>
                         </div>
@@ -393,14 +406,14 @@
                             <li>2 Operadores</li>
                         </ul>
                         <div class="d-flex justify-content-center">
-                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20Trivium%20Records"
+                            <a href="https://wa.me/524731370884?text=Hola%2C%20quiero%20informes%20sobre%20el%20Mega%20Conference%20Pack"
                                 class="boton mt-4 px-4 d-flex align-items-center justify-content-center" target="_blank"
                                 rel="noopener">
-                                <i class="fab fa-whatsapp fa-lg"></i>
+                                <i class="fab fa-whatsapp fa-lg m-2"></i>
                                 WhatsApp
                             </a>
                         </div>
-                        <p class="text-center text-white m-3">Costo: $54,000</p>
+                        <p class="text-center text-white m-3 ">Costo: $54,000</p>
                     </div>
                 </div>
             </div>
