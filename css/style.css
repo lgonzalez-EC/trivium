@@ -333,32 +333,16 @@ a.boton:hover {
   box-shadow: inset 0px 0px 25px #25D366;
 }
 
-
-
-
-
-
-/* Utilidades y helpers que sí uses (ejemplo) */
-.d-none {
-  display: none !important;
-}
-
-.d-block {
-  display: block !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.text-uppercase {
-  text-transform: uppercase !important;
-}
-
-.text-primary {
-  color: #E45F4E !important;
-}
-
-.bg-primary {
-  background-color: #E45F4E !important;
+/* Fondo difuminado solo para el área del menú colapsado en móviles */
+@media (max-width: 991.98px) {
+  #mainNavbar .navbar-collapse.show {
+    background: rgba(0, 0, 0, 0.425);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.322);
+    border-radius: 0 0 1.5rem 1.5rem;
+    backdrop-filter: blur(4px);
+    transition: background 0.3s;
+  }
+  #mainNavbar .navbar-nav .nav-link {
+    color: #fff !important;
+  }
 }

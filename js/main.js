@@ -109,6 +109,46 @@
     });
 
 
+    // Loading
+    const video = document.getElementById('loadingVideo');
+    const preloader = document.getElementById('preloader');
+    const mainContent = document.getElementById('main-content');
+
+    // Esperar a que el video termine para ocultar el preloader
+    video.addEventListener('ended', () => {
+      preloader.style.display = 'none';
+      mainContent.style.display = 'block';
+    });
+
+    // Fallback: por si el video no se reproduce bien, muestra el contenido tras 7s
+    setTimeout(() => {
+      if (preloader.style.display !== 'none') {
+        preloader.style.display = 'none';
+        mainContent.style.display = 'block';
+      }
+    }, 7000); // ajusta este valor si tu video dura más o menos
+
+    
+    // Cerrar el menú móvil personalizado al hacer clic fuera de él
+    document.addEventListener('click', function(event) {
+        // Si no existen los elementos, no hacer nada
+        if (!mobileMenu || !menuBtn || !closeMenuBtn) return;
+
+        // Si el menú NO está abierto, no hacer nada
+        if (!mobileMenu.classList.contains('translate-y-0')) return;
+
+        // Si el clic fue dentro del menú, en el botón de abrir o cerrar, no hacer nada
+        if (
+            mobileMenu.contains(event.target) ||
+            menuBtn.contains(event.target) ||
+            closeMenuBtn.contains(event.target)
+        ) {
+            return;
+        }
+
+        // Si llegamos aquí, el clic fue fuera del menú y este está abierto: cerrarlo
+        closeMobileMenu();
+    });
 
 })(jQuery);
 
