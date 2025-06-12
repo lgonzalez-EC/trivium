@@ -19,6 +19,26 @@
     });
 
 
+    // Loading
+    const video = document.getElementById('loadingVideo');
+    const preloader = document.getElementById('preloader');
+    const mainContent = document.getElementById('main-content');
+
+    // Esperar a que el video termine para ocultar el preloader
+    video.addEventListener('ended', () => {
+      preloader.style.display = 'none';
+      mainContent.style.display = 'block';
+    });
+
+    // Fallback: por si el video no se reproduce bien, muestra el contenido tras 7s
+    setTimeout(() => {
+      if (preloader.style.display !== 'none') {
+        preloader.style.display = 'none';
+        mainContent.style.display = 'block';
+      }
+    }, 7000); // ajusta este valor si tu video dura más o menos
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -108,29 +128,9 @@
         link.addEventListener('click', closeMobileMenu);
     });
 
-
-    // Loading
-    const video = document.getElementById('loadingVideo');
-    const preloader = document.getElementById('preloader');
-    const mainContent = document.getElementById('main-content');
-
-    // Esperar a que el video termine para ocultar el preloader
-    video.addEventListener('ended', () => {
-      preloader.style.display = 'none';
-      mainContent.style.display = 'block';
-    });
-
-    // Fallback: por si el video no se reproduce bien, muestra el contenido tras 7s
-    setTimeout(() => {
-      if (preloader.style.display !== 'none') {
-        preloader.style.display = 'none';
-        mainContent.style.display = 'block';
-      }
-    }, 7000); // ajusta este valor si tu video dura más o menos
-
     
     // Cerrar el menú móvil personalizado al hacer clic fuera de él
-    document.addEventListener('click', function(event) {
+    document.addEventListener('mousedown', function(event) {
         // Si no existen los elementos, no hacer nada
         if (!mobileMenu || !menuBtn || !closeMenuBtn) return;
 
@@ -148,6 +148,23 @@
 
         // Si llegamos aquí, el clic fue fuera del menú y este está abierto: cerrarlo
         closeMobileMenu();
+    });
+
+    // Cierra el menú colapsable de Bootstrap al hacer clic fuera de él
+    document.addEventListener('click', function (event) {
+        const navbarCollapse = document.getElementById('navbarNavDropdown');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        if (
+            navbarCollapse &&
+            navbarCollapse.classList.contains('show') &&
+            !navbarCollapse.contains(event.target) &&
+            !navbarToggler.contains(event.target)
+        ) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+            if (bsCollapse) {
+                bsCollapse.hide();
+            }
+        }
     });
 
 })(jQuery);
