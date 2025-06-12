@@ -55,7 +55,7 @@ a {
 
 a:hover {
   color: var(--secondary);
-  text-decoration: underline;
+  
 }
 
 /* Navbar personalizado */
@@ -67,16 +67,26 @@ a:hover {
   transition: background-color 0.4s cubic-bezier(.4, 0, .2, 1), box-shadow 0.4s cubic-bezier(.4, 0, .2, 1);
 }
 
-.navbar-dark .navbar-nav .nav-link {
+/* .navbar-dark .navbar-nav .nav-link {
   padding: 0 15px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #fff;
+  color: #E45F4E;
+} */
+
+/* Navbar links blancos y sin subrayado, con hover en color secundario */
+.navbar .navbar-nav .nav-link {
+  color: #fff !important;
+  text-decoration: none !important;
+  border: none;
+  transition: color 0.2s;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #E45F4E;
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+  color: var(--secondary) !important;
+  text-decoration: none !important;
+  border: none;
 }
 
 /* Carousel caption */
@@ -224,6 +234,7 @@ a:hover {
 .custom-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 16px 40px 0 #f79a203f;
+
 }
 
 .custom-card-img-wrapper {
@@ -256,7 +267,10 @@ a:hover {
   font-family: 'Alumni Sans SC', sans-serif;
   font-size: 2rem;
   margin-bottom: 0;
-  text-transform: uppercase;
+}
+
+.custom-card:hover .custom-card-content h4 {
+  color: var(--secondary) !important;
 }
 
 .custom-card-content p {
@@ -265,6 +279,69 @@ a:hover {
   margin-bottom: 0.5rem;
   text-align: justify;
 }
+
+.custom-card-content:hover p {
+  color: (var(--secondary));
+}
+
+
+/* Botones */
+a.boton {
+  display: inline-block;
+  width: 15em;
+  position: relative;
+  height: 3.5em;
+  line-height: 3.5em;
+  text-align: center;
+  text-decoration: none;
+  border: 3px ridge #25D366;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a.boton::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #000;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+a.boton::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #000;
+  transition: 0.5s;
+}
+
+a.boton:hover::before,
+a.boton:hover::after {
+  transform: scale(0);
+}
+
+a.boton:hover {
+  box-shadow: inset 0px 0px 25px #25D366;
+}
+
+
+
+
+
 
 /* Utilidades y helpers que sí uses (ejemplo) */
 .d-none {
