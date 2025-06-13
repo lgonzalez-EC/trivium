@@ -72,7 +72,7 @@
             navbar.classList.remove('bg-transparent', 'bg-white');
             logoText.classList.remove('text-white');
             logoText.classList.add('text-primary');
-            logoImg.src = 'img/logo_s.webp'; // Logo para fondo claro
+            // logoImg.src = 'img/logo_s.webp'; // Logo para fondo claro
             document.querySelectorAll('#mainNavbar .nav-link').forEach(a => {
                 a.classList.remove('text-white');
                 a.classList.add('text-light');
@@ -82,7 +82,7 @@
             navbar.classList.add('bg-transparent');
             logoText.classList.add('text-white');
             logoText.classList.remove('text-primary');
-            logoImg.src = 'img/logo_s.webp'; // Logo para fondo oscuro
+            // logoImg.src = 'img/logo_s.webp'; // Logo para fondo oscuro
             document.querySelectorAll('#mainNavbar .nav-link').forEach(a => {
                 a.classList.add('text-white');
                 a.classList.remove('text-light');
