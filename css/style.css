@@ -1,7 +1,7 @@
 /* Variables principales */
 :root {
   --primary: #1C0404;
-  --secondary: #F79A20;
+  --secondary: #9633cc;
   --light: #ffffff;
   --dark: #343a40;
 }
@@ -84,7 +84,7 @@ a:hover {
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-  color: #FFD200 !important;
+  color: #f2af13 !important;
   text-decoration: none !important;
   border: none;
 }
@@ -124,7 +124,7 @@ a:hover {
 .navbar .fab:hover,
 .navbar .fa-brands:hover,
 .navbar .fa:hover {
-  color: #FFD200 !important;
+  color: #9633cc !important;
 }
 
 /* Forzar visibilidad y color de iconos en el navbar */
@@ -140,7 +140,7 @@ a:hover {
 #mainNavbar .btn-outline-light:hover .fab,
 #mainNavbar .btn-outline-light:hover .fa-brands,
 #mainNavbar .btn-outline-light:hover .fa {
-  color: #FFD200 !important;
+  color: #9633cc !important;
 }
 
 
@@ -217,7 +217,7 @@ a:hover {
 .custom-card {
   background: linear-gradient(135deg, #424242 0%, #2b2b2b 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 8px 32px 0 #f79a2042;
+  box-shadow: 0 8px 32px 0 #9633cc7a;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -228,7 +228,7 @@ a:hover {
 
 .custom-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 16px 40px 0 #f79a203f;
+  box-shadow: 0 16px 40px 0 #9633cc;
 
 }
 
@@ -265,7 +265,7 @@ a:hover {
 }
 
 .custom-card:hover .custom-card-content h4 {
-  color: #FFD200 !important;
+  color: #9633cc !important;
 }
 
 .custom-card-content p {
@@ -276,7 +276,7 @@ a:hover {
 }
 
 .custom-card-content:hover .text-pack {
-  color: #FFD200 !important;
+  color: #9633cc !important;
 }
 
 
@@ -397,7 +397,7 @@ input, textarea {
     transition: box-shadow 0.2s;
 }
 input:focus, textarea:focus {
-    box-shadow: 0 0 0 2px #F79A20;
+    box-shadow: 0 0 0 2px #f2af13;
 }
 
 button {
@@ -408,7 +408,7 @@ button {
   line-height: 3.5em;
   text-align: center;
   text-decoration: none;
-  border: 3px ridge #0051ff;
+  border: 3px ridge #9633cc;
   outline: none;
   background-color: transparent;
   color: rgb(255, 255, 255);
@@ -449,7 +449,7 @@ button:hover::after {
 }
 
 button:hover {
-  box-shadow: inset 0px 0px 25px #0051ff;
+  box-shadow: inset 0px 0px 25px #9633cc;
 }
 
 .modal {
@@ -490,3 +490,39 @@ button:hover {
 
 
 
+/* Scrollbar personalizado para todo el sitio */
+html::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, #f2af13 0%, #1e293b 100%);
+  border-radius: 10px;
+  border: 3px solid #181c22;
+  box-shadow: 0 0 8px 2px #f2af1380;
+  min-height: 40px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(120deg, #f2af13 0%, #6800a0 100%);
+  box-shadow: 0 0 16px 4px #f2af1380;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgba(30,41,59,0.7);
+  border-radius: 10px;
+  margin: 8px 0;
+  box-shadow: inset 0 0 6px #0008;
+}
+
+html::-webkit-scrollbar-corner {
+  background: #181c22;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #f2af13 #2328370e;
+}
