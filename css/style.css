@@ -48,13 +48,13 @@ h6 {
 
 /* Enlaces */
 a {
-  color: var(--secondary);
+  color: #fff;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: var(--secondary);
+  color: #f2af13;
   
 }
 
@@ -120,14 +120,16 @@ a:hover {
   color: #fff !important;
   font-size: 1.4rem;
   vertical-align: middle;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
 }
 .navbar .fab:hover,
 .navbar .fa-brands:hover,
 .navbar .fa:hover {
-  color: #9633cc !important;
+  color: #f2af13 !important;
 }
 
-/* Forzar visibilidad y color de iconos en el navbar */
 #mainNavbar .fab,
 #mainNavbar .fa-brands,
 #mainNavbar .fa {
@@ -135,14 +137,22 @@ a:hover {
   font-size: 1.4rem;
   opacity: 1 !important;
   visibility: visible !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
 }
 
-#mainNavbar .btn-outline-light:hover .fab,
-#mainNavbar .btn-outline-light:hover .fa-brands,
-#mainNavbar .btn-outline-light:hover .fa {
-  color: #9633cc !important;
+#mainNavbar .btn:hover .fab,
+#mainNavbar .btn:hover .fa-brands,
+#mainNavbar .btn:hover .fa {
+  color: #f2af13 !important;
 }
 
+.btn-outline-light:hover .fab,
+.btn-outline-light:hover .fa-brands,
+.btn-outline-light:hover .fa {
+  color: #f2af13 !important;
+}
 
 /* Back to top */
 .back-to-top {
@@ -217,7 +227,7 @@ a:hover {
 .custom-card {
   background: linear-gradient(135deg, #424242 0%, #2b2b2b 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 8px 32px 0 #9633cc7a;
+  box-shadow: 0 8px 32px 0 #f2af132c;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -228,7 +238,7 @@ a:hover {
 
 .custom-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 16px 40px 0 #9633cc;
+  box-shadow: 0 16px 40px 0 #f2af13c5;
 
 }
 
@@ -265,7 +275,7 @@ a:hover {
 }
 
 .custom-card:hover .custom-card-content h4 {
-  color: #9633cc !important;
+  color: #f2af13 !important;
 }
 
 .custom-card-content p {
@@ -276,7 +286,7 @@ a:hover {
 }
 
 .custom-card-content:hover .text-pack {
-  color: #9633cc !important;
+  color: #f2af13 !important;
 }
 
 
@@ -400,7 +410,7 @@ input:focus, textarea:focus {
     box-shadow: 0 0 0 2px #f2af13;
 }
 
-button {
+.btn-enviar{
   display: inline-block;
   width: 15em;
   position: relative;
@@ -419,7 +429,7 @@ button {
   cursor: pointer;
 }
 
-button::after {
+.btn-enviar::after {
   content: "";
   position: absolute;
   top: -10px;
@@ -431,7 +441,7 @@ button::after {
   transform-origin: center;
 }
 
-button::before {
+.btn-enviar::before {
   content: "";
   transform-origin: center;
   position: absolute;
@@ -443,12 +453,12 @@ button::before {
   transition: 0.5s;
 }
 
-button:hover::before,
-button:hover::after {
+.btn-enviar:hover::before,
+.btn-enviar:hover::after {
   transform: scale(0);
 }
 
-button:hover {
+.btn-enviar:hover {
   box-shadow: inset 0px 0px 25px #9633cc;
 }
 
