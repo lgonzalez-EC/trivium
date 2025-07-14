@@ -395,6 +395,165 @@ a.boton:hover {
   box-shadow: inset 0px 0px 25px #25D366;
 }
 
+a.boton {
+  display: inline-block;
+  width: 15em;
+  position: relative;
+  height: 3.5em;
+  line-height: 3.5em;
+  text-align: center;
+  text-decoration: none;
+  border: 3px ridge #25D366;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a.boton::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #000;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+a.boton::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #000;
+  transition: 0.5s;
+}
+
+a.boton:hover::before,
+a.boton:hover::after {
+  transform: scale(0);
+}
+
+a.boton:hover {
+  box-shadow: inset 0px 0px 25px #25D366;
+}
+
+
+a.boton-contacto {
+  display: inline-block;
+  width: 15em;
+  position: relative;
+  height: 3.5em;
+  line-height: 3.5em;
+  text-align: center;
+  text-decoration: none;
+  border: 3px ridge #9633cc;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a.boton-contacto::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #f2af13;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+a.boton-contacto::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #f2af13;
+  transition: 0.5s;
+}
+
+a.boton-contacto:hover::before,
+a.boton-contacto:hover::after {
+  transform: scale(0);
+}
+
+a.boton-contacto:hover {
+  box-shadow: inset 0px 0px 25px #9633cc;
+}
+
+a.boton-contacto {
+  display: inline-block;
+  width: 15em;
+  position: relative;
+  height: 3.5em;
+  line-height: 3.5em;
+  text-align: center;
+  text-decoration: none;
+  border: 3px ridge #9633cc;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a.boton-contacto::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #f2af13;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+a.boton-contacto::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #f2af13;
+  transition: 0.5s;
+}
+
+a.boton-contacto:hover::before,
+a.boton-contacto:hover::after {
+  transform: scale(0);
+}
+
+a.boton-contacto:hover {
+  box-shadow: inset 0px 0px 25px #9633cc;
+}
+
+
+
 
 /* Fondo difuminado solo para el área del menú colapsado en móviles */
 @media (max-width: 991.98px) {
@@ -597,6 +756,10 @@ html {
 }
 
 
-
+.card-horario:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
 
 
