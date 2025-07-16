@@ -58,35 +58,82 @@ a:hover {
   
 }
 
-/* Navbar personalizado */
-.navbar-shadow {
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.10), 0 1.5px 4px 0 rgba(0, 0, 0, 0.08);
+
+/* navbar */
+
+/* Fondo y blur al hacer scroll */
+.navbar-black-blur {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(2px);
 }
 
+/* Transiciones suaves */
 .transition-bg {
-  transition: background-color 0.4s cubic-bezier(.4, 0, .2, 1), box-shadow 0.4s cubic-bezier(.4, 0, .2, 1);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
 }
 
-/* .navbar-dark .navbar-nav .nav-link {
-  padding: 0 15px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #E45F4E;
-} */
+/* Ocultar navbar */
+.hide-navbar {
+  transform: translateY(-100%);
+}
 
-/* Navbar links blancos y sin subrayado, con hover en color secundario */
-.navbar .navbar-nav .nav-link {
+/* Estilo links y redes */
+.navbar .nav-link {
   color: #fff !important;
-  text-decoration: none !important;
-  border: none;
-  transition: color 0.2s;
+  transition: color 0.3s ease;
 }
 
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
   color: #f2af13 !important;
-  text-decoration: none !important;
-  border: none;
+}
+
+.navbar .fab {
+  color: #fff;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .fab:hover {
+  color: #f2af13;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    margin-left: 40px; /* Ajusta este valor según lo que veas necesario */
+  }
+}
+
+/* Centrado del navbar */
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav {
+    margin-left: 0 !important; /* Elimina el margen que estaba descentrando */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Ajusta el contenedor de redes sociales */
+.navbar .d-flex.align-items-center {
+    margin-left: auto;
+}
+
+/* Asegura que en móviles también esté centrado */
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+    
+    .navbar-nav {
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 /* Carousel caption */
@@ -97,61 +144,6 @@ a:hover {
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
-}
-
-/* Navbar */
-.transition-bg {
-  transition: background-color 0.5s ease, box-shadow 0.5s ease;
-}
-
-.navbar-shadow {
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.10), 0 1.5px 4px 0 rgba(0, 0, 0, 0.08);
-}
-
-.navbar-black-blur {
-  background: rgba(0, 0, 0, 0.85) !important;
-  backdrop-filter: blur(2px);
-}
-
-/* Asegura que los iconos sean visibles */
-.navbar .fab,
-.navbar .fa-brands,
-.navbar .fa {
-  color: #fff !important;
-  font-size: 1.4rem;
-  vertical-align: middle;
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
-}
-.navbar .fab:hover,
-.navbar .fa-brands:hover,
-.navbar .fa:hover {
-  color: #f2af13 !important;
-}
-
-#mainNavbar .fab,
-#mainNavbar .fa-brands,
-#mainNavbar .fa {
-  color: #fff !important;
-  font-size: 1.4rem;
-  opacity: 1 !important;
-  visibility: visible !important;
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
-}
-
-#mainNavbar .btn:hover .fab,
-#mainNavbar .btn:hover .fa-brands,
-#mainNavbar .btn:hover .fa {
-  color: #f2af13 !important;
-}
-
-.btn-outline-light:hover .fab,
-.btn-outline-light:hover .fa-brands,
-.btn-outline-light:hover .fa {
-  color: #f2af13 !important;
 }
 
 /* Back to top */
