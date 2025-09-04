@@ -18,7 +18,6 @@
         $(window).resize(toggleNavbarMethod);
     });
 
-
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -61,7 +60,6 @@
         }
     });
 
-
     // Navbar background, sombra y cambio de logo al hacer scroll
     const navbar = document.getElementById('mainNavbar');
     const logoText = document.getElementById('logoText');
@@ -94,31 +92,73 @@
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('-translate-y-full');
-        mobileMenu.classList.add('translate-y-0');
-    });
-    closeMenuBtn.addEventListener('click', closeMobileMenu);
-    function closeMobileMenu() {
-        mobileMenu.classList.add('-translate-y-full');
-        mobileMenu.classList.remove('translate-y-0');
-    }
-    // Cierra el menú móvil al hacer click en un link
-    document.querySelectorAll('#mobileMenu a').forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
+    if (menuBtn && mobileMenu && closeMenuBtn) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-y-full');
+            mobileMenu.classList.add('translate-y-0');
+        });
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+        function closeMobileMenu() {
+            mobileMenu.classList.add('-translate-y-full');
+            mobileMenu.classList.remove('translate-y-0');
+        }
+        // Cierra el menú móvil al hacer click en un link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
 
+        // Cerrar el menú móvil personalizado al hacer clic fuera de él
+        document.addEventListener('mousedown', function(event) {
+            // Si no existen los elementos, no hacer nada
+            if (!mobileMenu || !menuBtn || !closeMenuBtn) return;
+
+            // Si el menú NO está abierto, no hacer nada
+            if (!mobileMenu.classList.contains('translate-y-0')) return;
+
+            // Si el clic fue dentro del menú, en el botón de abrir o cerrar, no hacer nada
+            if (
+                mobileMenu.contains(event.target) ||
+                menuBtn.contains(event.target) ||
+                closeMenuBtn.contains(event.target)
+            ) {
+                return;
+            }
+
+            // Si llegamos aquí, el clic fue fuera del menú y este está abierto: cerrarlo
+            closeMobileMenu();
+        });
+    }
+
+    // Cerrar el menú de navegación al hacer clic fuera de él (para móviles)
+    document.addEventListener('click', function(event) {
+        const navbarCollapse = document.getElementById('navbarNavDropdown');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+            if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    hide: true
+                });
+            }
+        }
+    });
 
     // Loading
     const video = document.getElementById('loadingVideo');
     const preloader = document.getElementById('preloader');
     const mainContent = document.getElementById('main-content');
 
-    // Esperar a que el video termine para ocultar el preloader
-    video.addEventListener('ended', () => {
-      preloader.style.display = 'none';
-      mainContent.style.display = 'block';
-    });
+    if (video) {
+        // Esperar a que el video termine para ocultar el preloader con efecto de opacidad
+        video.addEventListener('ended', () => {
+            preloader.style.transition = 'opacity 0.7s ease';
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                mainContent.style.display = 'block';
+            }, 700);
+        });
+    }
 
     // Fallback: por si el video no se reproduce bien, muestra el contenido tras 7s
     setTimeout(() => {
@@ -127,30 +167,6 @@
         mainContent.style.display = 'block';
       }
     }, 7000); // ajusta este valor si tu video dura más o menos
-
-    
-    // Cerrar el menú móvil personalizado al hacer clic fuera de él
-    document.addEventListener('mousedown', function(event) {
-        // Si no existen los elementos, no hacer nada
-        if (!mobileMenu || !menuBtn || !closeMenuBtn) return;
-
-        // Si el menú NO está abierto, no hacer nada
-        if (!mobileMenu.classList.contains('translate-y-0')) return;
-
-        // Si el clic fue dentro del menú, en el botón de abrir o cerrar, no hacer nada
-        if (
-            mobileMenu.contains(event.target) ||
-            menuBtn.contains(event.target) ||
-            closeMenuBtn.contains(event.target)
-        ) {
-            return;
-        }
-
-        // Si llegamos aquí, el clic fue fuera del menú y este está abierto: cerrarlo
-        closeMobileMenu();
-    });
-
-    
 
 })(jQuery);
 
